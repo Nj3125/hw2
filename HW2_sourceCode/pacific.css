@@ -1,0 +1,115 @@
+/*
+HW2
+Nicholas Johnson
+10/1/2025
+GUI Programming I
+*/
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+
+/* The background gradient and default color */
+body {
+	background-color: #00569f;
+	background-image:url(ptrbackground.jpg);
+	color: #666666;
+	width: 80%;
+	min-width: 600px;
+	margin:auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The main grid for the website */
+#wrapper {
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+	"header header"
+	"nav content"
+	"nav footer";
+}
+header {
+	grid-area: header;
+}
+
+/* Nav bar, with fixed width defined in the grid */
+nav {
+	grid-area: nav;
+	background-color: #7ab6d4;
+	box-sizing: border-box;
+}
+nav ul {
+	list-style-type:none;
+	height:auto;
+	font-size: 1.4em;
+	font-weight: bold;
+	padding-left: 15px;
+}
+nav a:link {
+	text-decoration: none;
+	color: #000033;
+}
+nav a:visited {
+	color: #344873;
+}
+nav a:hover {
+	color: #FFFFFF;
+}
+
+/* h1, using the same color as the gradient on the title image combined with the image */
+h1 {
+	background-color:#000033;
+	background-image:url(sunset.jpg);
+	background-position:right;
+	background-repeat:no-repeat;
+
+	color: white;
+	margin-bottom: 0;
+	padding: 10px;
+}
+h2 {
+	color: #3399CC;
+}
+h1, h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+#contact {
+	font-size: 90%;
+}
+
+/* Content with everything else in it */
+#content {
+	background-color:white;
+	grid-area: content;
+	box-sizing: border-box;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+#content ul {
+	list-style-image: url(marker.gif);
+}
+
+/* Floated to left for text-wrapping effect, extra margins for clean text placement */
+img {
+	float: left;
+	margin-right: 20px;
+}
+span {
+	color: #3399CC;
+	font-weight: bold;
+}
+dt {
+	color: #000033;
+}
+
+/* Footer styling */
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	grid-area: footer;
+  	padding: 20px;
+  	box-sizing: border-box;
+	background-color:white;
+}
